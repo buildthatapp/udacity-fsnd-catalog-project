@@ -28,6 +28,8 @@ class Item(Base):
     price = Column(String(10))
     category_id = Column(Integer, ForeignKey('category.id'))
     category = relationship(Category)
+    user_id = Column(Integer, ForeignKey('user.id'))
+    user = relationship(User)
 
     @property
     def serialize(self):
@@ -37,6 +39,9 @@ class Item(Base):
            'description'         : self.description,
            'id'         : self.id,
            'price'         : self.price,
+           'category'        :  self.category,
+           'user_id'         :  self.user_id,
+           'category_id'      :  self.category_id,
        }
 
 class User(Base):
