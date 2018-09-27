@@ -30,7 +30,7 @@ session.add(category1)
 session.commit()
 
 
-categoryItem1 = CategoryItem(name = "Fender Limited Edition Standard Stratocaster", description = "Value, tone, and limited edition style.", price = "$599.99", category = category1)
+categoryItem1 = CategoryItem(name = "Fender Limited Edition Standard Stratocaster", description = "Value, tone, and limited edition style.", price = "$599.99", category = category1, user_id = 1, )
 
 session.add(categoryItem1)
 session.commit()
